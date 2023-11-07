@@ -1,11 +1,8 @@
 const contentNewTask = document.querySelector('.wribe_task');
 const btnNewTask = document.querySelector('.btn_add_task');
 const areaAllTasks = document.querySelector('.all_tasks');
-
 let allTasks = [];
-
 btnNewTask.addEventListener('click', addContent)
-
 function addContent() {
     allTasks.push(
         { task: contentNewTask.value,
@@ -13,7 +10,6 @@ function addContent() {
     contentNewTask.value = ''
     addTaskUnit()
 }
-
 function addTaskUnit() {
     let novaUnit = ''
     allTasks.forEach((index, position) => {
@@ -42,5 +38,4 @@ function reloadTasks() {
         allTasks = JSON.parse(tasksLocalStorage)}
     addTaskUnit()
 }
-
 reloadTasks()
